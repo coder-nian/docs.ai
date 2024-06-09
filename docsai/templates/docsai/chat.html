@@ -1,0 +1,74 @@
+{% extends 'docsai/layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'docsai/chat.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<nav class="navbar sticky-top bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'docsai/Docs.AI logo.jpg' %}" alt="Logo" width="auto" height="24" class="d-inline-block align-text-top">
+      Docs.AI
+    </a>
+    {% if user.is_authenticated %}
+      <a href="{% url 'logout' %}"><p>Logout</p></a>
+    {% else %}
+      <a href="{% url 'register' %}"><p>Register</p></a>
+    {% endif %}
+  </div>
+</nav>
+<div class="chat-container">
+  <div class="card flex-grow-1">
+    <div class="card-body messages-box">
+      <ul class="list-unstyled messages-list">
+
+        {% for chat in chats %}
+        {% if chat.user == request.user %}
+
+        <li class="message sent">
+          <div class="message-text">
+            <div class="message-sender">
+              <b>{{ user.username }}</b>
+            </div>
+            <div class="message-content">
+              {{chat.message}}
+            </div>
+          </div>
+        </li>
+
+        <li class="message received">
+          <div class="message-text">
+            <div class="message-sender">
+              <b>Docs.AI</b>
+            </div>
+            <div class="message-content">
+              {{chat.response}}
+            </div>
+          </div>
+        </li>
+
+        {% endif %}
+        {% endfor %}
+
+      </ul>
+
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+  </div>
+  <form class="message-form">
+    {%csrf_token%}
+    <div class="input-group">
+      <textarea class="form-control message-input" placeholder="Your query..."></textarea>
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-primary btn-send">Send</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script src="{% static 'docsai/chat.js' %}"></script>
+{% endblock %}

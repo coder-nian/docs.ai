@@ -1,0 +1,34 @@
+{% extends 'docsai/layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'docsai/login.css' %}">
+{% endblock %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+<div class="login-container">
+  <div class="card">
+    <div class="card-header">Login</div>
+    <div class="card-body">
+      {% if error_message %}
+        <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+      {% endif %}
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <a href="{% url 'register' %}"><p>Register here</p></a>
+    </div>
+  </div>
+</div>
+{% endblock %}
