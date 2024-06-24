@@ -14,7 +14,6 @@ Docs.AI RAG Chatbot is an advanced application designed to revolutionize documen
 - **User-Friendly Interface:** Designed with HTML5 and CSS3 for easy navigation and efficient access.
 - **AI-driven Document Management:** Enhance document search, retrieval, summarization, and content generation with advanced AI algorithms.
 
-![RAG](images/RAG%20Explanation.png)
 ![Comparison](images/Llama3%20vs%20Other%20Models.png)
 
 ## Target Audience
