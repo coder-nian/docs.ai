@@ -71,7 +71,7 @@ def query_api(query_text: str, history: list):
     )
     chat_completion = client.chat.completions.create(
         messages=history,
-        model="llama3-70b-8192",
+        model="llama-3.1-70b-versatile",
     )
     response = chat_completion.choices[0].message.content
     history.append(
@@ -100,7 +100,7 @@ def query_llm(query_text: str, history: list):
             "content": prompt,
         }
     )
-    model = Ollama(model="llama3")
+    model = Ollama(model="llama3.1")
     response = model.invoke(prompt)
     history.append(
         {

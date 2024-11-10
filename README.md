@@ -3,19 +3,21 @@
 ![Logo](images/Docs.AI%20logo.jpg)
 
 ## Introduction
-Docs.AI RAG Chatbot is an advanced application designed to revolutionize document interactions through AI-driven capabilities. By leveraging Retrieval-Augmented Generation (RAG) techniques and integrating state-of-the-art Large Language Models (LLMs) like Llama3 8B and Llama3 80B, Docs.AI allows users to engage in natural language conversations with their documents, enabling efficient querying, retrieval, summarization, and content generation.
+Docs.AI RAG Chatbot is an advanced application designed to revolutionize document interactions through AI-driven capabilities. By leveraging Retrieval-Augmented Generation (RAG) techniques and integrating state-of-the-art Large Language Models (LLMs) like Llama3.1, Docs.AI allows users to engage in natural language conversations with their documents, enabling efficient querying, retrieval, summarization, and content generation.
 
-![Benchmarks](images/Llama3%20Benchmark.png)
+![Benchmarks](images/benchmark1.png)
+![Benchmarks](images/benchmark2.png)
 
 ## Key Features
 - **Natural Language Conversations:** Interact with documents using conversational language inputs.
 - **Retrieval-Augmented Generation (RAG):** Combine document retrieval with content generation for contextually relevant responses.
-- **LLM Integration:** Utilize Llama3 8B and Llama3 80B for accurate and context-aware natural language processing.
+- **LLM Integration:** Utilize Llama3.1 for accurate and context-aware natural language processing.
 - **User-Friendly Interface:** Designed with HTML5 and CSS3 for easy navigation and efficient access.
 - **AI-driven Document Management:** Enhance document search, retrieval, summarization, and content generation with advanced AI algorithms.
+- **Cloud and Local Model Execution:** Use API for cloud-based execution and Ollama for running the model locally.
 
-![RAG](images/RAG%20Explanation.png)
-![Comparison](images/Llama3%20vs%20Other%20Models.png)
+![Comparison](images/comparison.png)
+![Model Architecture](images/model-architecture.png)
 
 ## Target Audience
 - **Professionals, Researchers, Educators, Knowledge Workers:** For efficient document handling in daily workflows.
@@ -62,7 +64,7 @@ Docs.AI RAG Chatbot is an advanced application designed to revolutionize documen
 - **Programming Languages:** Python 3.12, HTML5, CSS3, JavaScript, SQLite3.
 - **Frameworks and Libraries:** LangChain, Django, various AI and NLP libraries.
 - **Vector/Embedding Database:** ChromaDB.
-- **Additional Tools:** pytest for testing, Django REST framework, PyYAML, Git, GitHub, pip for dependency management.
+- **Additional Tools:** pytest for testing, Django REST framework, Git, GitHub, pip for dependency management.
 
 ### Hardware Requirements
 - **CPU:** Modern CPU with at least 8 cores.
@@ -75,7 +77,7 @@ Docs.AI RAG Chatbot is an advanced application designed to revolutionize documen
 
 ### Frontend
 - **HTML5 and CSS3:** For structuring and styling web pages.
-- **JavaScript and jQuery:** For client-side scripting and interactivity.
+- **JavaScript:** For client-side scripting and interactivity.
 - **Responsive Design:** Ensuring the interface adapts to various screen sizes and devices.
 
 ### Backend
